@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Updated Portfolio - Demo of GitHub Web Interface Changes -->
+<!-- Futuristic Professional Portfolio - Updated for 2025+ -->
 <!-- Last updated: October 29, 2025 -->
 
 <html lang="en">
@@ -7,33 +7,165 @@
   <meta charset="utf-8" />
   <meta content="width=device-width,initial-scale=1.0" name="viewport" />
   <title>Behara Sai Eshwar Yerram Raju - Portfolio</title>
+  <!-- Google Fonts: futuristic style -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
-    .container { background: #fff; padding: 2em; max-width: 800px; margin: auto; box-shadow: 0 0 10px #ccc; }
-    h1, h2 { color: #2c3e50; }
-    ul { list-style-type: disc; margin-left: 20px; }
-    .contact { margin-top: 1em; }
-    .section { margin-bottom: 2em; }
+    :root {
+      --primary-color: #0fffc3;
+      --secondary-color: #322f4d;
+      --accent-color: #ff5cfa;
+      --bg-gradient: linear-gradient(135deg, #181a29 0%, #2f2a4d 100%);
+      --card-gradient: linear-gradient(135deg, #232348 60%, #353675 100%);
+      --text-color: #e5e7fa;
+      --heading-color: #0fffc3;
+      --border-glow: 0 0 16px var(--primary-color);
+      --box-shadow: 0 0 24px 0 var(--accent-color);
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      transition: background 0.3s;
+    }
+    .container {
+      background: var(--card-gradient);
+      border-radius: 24px;
+      padding: 2.5em 2em;
+      max-width: 800px;
+      margin: 3em auto;
+      box-shadow: var(--box-shadow);
+      border: 2px solid var(--primary-color);
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 24px 0 var(--primary-color); }
+      to { box-shadow: 0 0 48px 0 var(--accent-color); }
+    }
+    h1, h2 {
+      font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+      color: var(--heading-color);
+      text-shadow: 0 0 14px var(--primary-color);
+      margin-bottom: 0.5em;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.3em;
+      margin-top: 2em;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 22px;
+      margin-bottom: 1em;
+    }
+    li {
+      margin-bottom: 0.6em;
+    }
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s;
+      border-bottom: 1px dotted var(--primary-color);
+    }
+    a:hover {
+      color: var(--primary-color);
+      border-bottom: 1px solid var(--accent-color);
+      text-shadow: 0 0 6px var(--accent-color);
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      box-shadow: var(--border-glow);
+      object-fit: cover;
+      border: 3px solid var(--accent-color);
+      margin-right: 1em;
+    }
+    .contact-info {
+      font-size: 1.1em;
+      color: var(--text-color);
+    }
+    .links {
+      margin-top: 0.6em;
+      font-size: 1.1em;
+    }
+    .links a {
+      margin-right: 1.2em;
+      border-bottom: none;
+    }
+    .section {
+      margin-bottom: 2em;
+      background: rgba(30, 30, 50, 0.6);
+      border-radius: 16px;
+      padding: 1.3em 1em;
+      box-shadow: 0 0 8px var(--primary-color);
+      border-left: 3px solid var(--accent-color);
+      transition: background 0.3s;
+    }
+    .section:hover {
+      background: rgba(60, 60, 100, 0.8);
+    }
+    .sub-list {
+      margin-left: 1.5em;
+    }
+    .highlight {
+      color: var(--primary-color);
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+      padding: 0.2em 0.4em;
+      font-weight: bold;
+    }
+    @media (max-width: 650px) {
+      .container { padding: 1.1em 0.5em; }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.1em; }
+      .profile { flex-direction: column; align-items: flex-start; }
+      .avatar { width: 65px; height: 65px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Behara Sai Eshwar Yerram Raju</h1>
-    <p>Vizag, AP | <a href="mailto:eeshu155@gmail.com">eeshu155@gmail.com</a> | 9550139483</p>
-    <p>
-      <a href="#">LinkedIn</a> |
-      <a href="#">GitHub</a>
-    </p>
+    <div class="profile">
+      <img src="https://avatars.githubusercontent.com/u/eshwar-21?v=4" alt="Eshwar Avatar" class="avatar" />
+      <div>
+        <h1>Behara Sai Eshwar Yerram Raju</h1>
+        <div class="contact-info">
+          Vizag, AP &nbsp;|&nbsp; <a href="mailto:eeshu155@gmail.com">eeshu155@gmail.com</a> &nbsp;|&nbsp; <span class="highlight">9550139483</span>
+        </div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/behara-sai-eshwar-yerram-raju-8ba725386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+          <a href="https://github.com/eshwar-21" target="_blank">GitHub</a>
+          <a href="mailto:eeshu155@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
     <div class="section">
       <h2>About Me</h2>
       <p>
-        Aspiring Computer Science graduate with hands-on experience in real-world data science, machine learning, and IoT applications. Motivated to use technology for impactful solutions and continuous learning.
+        <span class="highlight">Aspiring Computer Science graduate</span> with hands-on experience in data science, machine learning, and IoT applications. Passionate about leveraging technology for impactful solutions and lifelong learning. Quick to adapt to new challenges and always eager to innovate in a futuristic world.
       </p>
     </div>
     <div class="section">
       <h2>Technical Skills</h2>
       <ul>
-        <li><strong>Languages:</strong> Python, C, C++, JavaScript, HTML, CSS, SQL</li>
+        <li><strong>Languages:</strong> <span class="highlight">Python, C, C++, JavaScript, HTML, CSS, SQL</span></li>
         <li><strong>Frameworks/Libraries:</strong> Numpy, Pandas, Matplotlib, Streamlit</li>
         <li><strong>Database & Systems:</strong> DBMS, Operating System, OOP, Networks</li>
         <li><strong>Tools:</strong> Git, GitHub, VS Code, Google Colab</li>
@@ -44,17 +176,13 @@
       <h2>Projects</h2>
       <ul>
         <li>
-          <strong>Smart Blind Stick</strong>
-          <br />
-          Tech: C, Arduino Uno
-          <br />
-          Enhanced visually impaired mobility/independence using sensor technology.
+          <strong>Smart Blind Stick</strong> <br />
+          <span class="highlight">Tech:</span> C, Arduino Uno <br />
+          Enhanced visually impaired mobility and independence using sensor technology.
         </li>
         <li>
-          <strong>Faculty Alert System Using GSM</strong>
-          <br />
-          Tech: C, GSM, NodeMcu
-          <br />
+          <strong>Faculty Alert System Using GSM</strong> <br />
+          <span class="highlight">Tech:</span> C, GSM, NodeMcu <br />
           Real-time communication platform for faculty-student interaction.
         </li>
       </ul>
@@ -62,15 +190,15 @@
     <div class="section">
       <h2>Education</h2>
       <ul>
-        <li>Bachelor of Science in Computer Science, Gayatri Vidya Parishad College (GPA 7.8) Minor: Applied IoT</li>
-        <li>12th (MPC), SVK Junior College (63.2%)</li>
+        <li><strong>B.Sc. Computer Science</strong>, Gayatri Vidya Parishad College <span class="highlight">(GPA 7.8)</span> <br />Minor: Applied IoT</li>
+        <li>12th (MPC), SVK Junior College <span class="highlight">(63.2%)</span></li>
       </ul>
     </div>
     <div class="section">
       <h2>Experience</h2>
       <ul>
-        <li>Python Full-Stack Intern, HMIES Startup AP, Vizag (June-July 2025)
-          <ul>
+        <li>Python Full-Stack Intern, HMIES Startup AP, Vizag <span class="highlight">(June-July 2025)</span>
+          <ul class="sub-list">
             <li>Developed data visualization dashboards with Pandas, Matplotlib via Google Colab</li>
             <li>Built ML-based engine failure classifier</li>
             <li>Improved workflow and tested model accuracy</li>
@@ -81,9 +209,9 @@
     <div class="section">
       <h2>Certifications</h2>
       <ul>
-        <li>Datapro Organization: Certified in C Language (2023)</li>
-        <li>edX Curtin University: Certified in IoT (2024)</li>
-        <li>MongoDB: Certified in MongoDB basics (2025)</li>
+        <li>Datapro Organization: <span class="highlight">Certified in C Language</span> (2023)</li>
+        <li>edX Curtin University: <span class="highlight">Certified in IoT</span> (2024)</li>
+        <li>MongoDB: <span class="highlight">Certified in MongoDB basics</span> (2025)</li>
       </ul>
     </div>
     <div class="section">
@@ -97,7 +225,7 @@
       <h2>Contact</h2>
       <ul>
         <li>Email: <a href="mailto:eeshu155@gmail.com">eeshu155@gmail.com</a></li>
-        <li>Phone: 9550139483</li>
+        <li>Phone: <span class="highlight">9550139483</span></li>
       </ul>
     </div>
   </div>
