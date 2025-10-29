@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Behara Sai Eshwar Yerram Raju - Portfolio</title>
   <!-- Google Fonts: futuristic style -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --primary-color: #0fffc3;
@@ -27,44 +27,6 @@
       color: var(--text-color);
       transition: background 0.3s;
     }
-
-    /* Toolbar styles */
-    .toolbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      gap: 12px;
-      padding: 12px 16px;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(24,26,41,0.85) 0%, rgba(24,26,41,0.55) 100%);
-      border-bottom: 1px solid rgba(15,255,195,0.25);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-    }
-    .btn-fx {
-      appearance: none;
-      border: 1px solid rgba(15,255,195,0.35);
-      color: var(--text-color);
-      background: radial-gradient(120% 120% at 0% 0%, rgba(15,255,195,0.15) 0%, rgba(255,92,250,0.1) 50%, rgba(50,47,77,0.6) 100%);
-      padding: 10px 16px;
-      border-radius: 12px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      box-shadow: 0 0 0 0 rgba(15,255,195,0);
-    }
-    .btn-fx:hover {
-      transform: translateY(-1px);
-      border-color: var(--primary-color);
-      box-shadow: 0 0 18px rgba(15,255,195,0.35);
-    }
-    .btn-primary { color: #031a16; background: linear-gradient(135deg,#0fffc3 0%,#6bf7e2 100%); border-color: #13ffd1; }
-    .btn-primary:hover { box-shadow: 0 0 22px rgba(19,255,209,0.55); }
-    .btn-accent { background: linear-gradient(135deg,#ff5cfa 0%,#c45cff 100%); border-color: #ff7dfc; }
-
     .container {
       background: var(--card-gradient);
       border-radius: 24px;
@@ -81,27 +43,19 @@
   </style>
 </head>
 <body>
-  <!-- Floating toolbar with Save and Run actions -->
-  <div class="toolbar" role="toolbar" aria-label="Editor actions">
-    <button id="btnSave" class="btn-fx btn-primary" title="Download this page as index.html. Tip: To commit on GitHub later, use: git add index.html && git commit -m 'feat: add Save/Run toolbar' && git push">Save</button>
-    <button id="btnRun" class="btn-fx btn-accent" title="Open a preview of this portfolio in a new tab (simulated run). Tip: After verifying, commit via GitHub UI or: git add . && git commit -m 'chore: preview changes' && git push">Run</button>
-  </div>
-
   <div class="container">
     <!-- Existing portfolio content starts here (kept intact) -->
     <header>
       <h1>Behara Sai Eshwar Yerram Raju</h1>
     </header>
-
     <!-- Education -->
     <div class="section">
       <h2>Education</h2>
       <ul>
-        <li><strong>B.Sc. Computer Science</strong>, Gayatri Vidya Parishad College <span class="highlight">(GPA 7.8)</span> — Minor: Applied IoT</li>
+        <li>B.Sc. Computer Science, Gayatri Vidya Parishad College <span class="highlight">(GPA 7.8)</span> — Minor: Applied IoT</li>
         <li>12th (MPC), SVK Junior College <span class="highlight">(63.2%)</span></li>
       </ul>
     </div>
-
     <!-- Experience -->
     <div class="section">
       <h2>Experience</h2>
@@ -115,7 +69,6 @@
         </li>
       </ul>
     </div>
-
     <!-- Certifications -->
     <div class="section">
       <h2>Certifications</h2>
@@ -125,7 +78,6 @@
         <li>MongoDB: <span class="highlight">Certified in MongoDB basics</span> (2025)</li>
       </ul>
     </div>
-
     <!-- Other Training -->
     <div class="section">
       <h2>Other Training</h2>
@@ -134,7 +86,6 @@
         <li>Arduino Programming (Teckbot)</li>
       </ul>
     </div>
-
     <!-- Contact -->
     <div class="section contact">
       <h2>Contact</h2>
@@ -144,28 +95,5 @@
       </ul>
     </div>
   </div>
-
-  <script>
-    // SAVE: trigger download of current HTML as index.html
-    document.getElementById('btnSave').addEventListener('click', () => {
-      const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'index.html';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    });
-
-    // RUN: open current page in a new tab (simulate preview)
-    document.getElementById('btnRun').addEventListener('click', () => {
-      const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      window.open(url, '_blank', 'noopener');
-      // URL will be revoked by the new tab when closed; safe to leave active for preview
-    });
-  </script>
 </body>
 </html>
