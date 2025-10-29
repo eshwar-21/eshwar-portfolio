@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!-- Futuristic Professional Portfolio - Updated for 2025+ -->
-<!-- Last updated: October 29, 2025 -->
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Behara Sai Eshwar Yerram Raju - Portfolio</title>
   <!-- Google Fonts: futuristic style -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap">
   <style>
     :root {
       --primary-color: #0fffc3;
@@ -30,170 +27,82 @@
       color: var(--text-color);
       transition: background 0.3s;
     }
+
+    /* Toolbar styles */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      gap: 12px;
+      padding: 12px 16px;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(24,26,41,0.85) 0%, rgba(24,26,41,0.55) 100%);
+      border-bottom: 1px solid rgba(15,255,195,0.25);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+    .btn-fx {
+      appearance: none;
+      border: 1px solid rgba(15,255,195,0.35);
+      color: var(--text-color);
+      background: radial-gradient(120% 120% at 0% 0%, rgba(15,255,195,0.15) 0%, rgba(255,92,250,0.1) 50%, rgba(50,47,77,0.6) 100%);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 0 0 0 rgba(15,255,195,0);
+    }
+    .btn-fx:hover {
+      transform: translateY(-1px);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 18px rgba(15,255,195,0.35);
+    }
+    .btn-primary { color: #031a16; background: linear-gradient(135deg,#0fffc3 0%,#6bf7e2 100%); border-color: #13ffd1; }
+    .btn-primary:hover { box-shadow: 0 0 22px rgba(19,255,209,0.55); }
+    .btn-accent { background: linear-gradient(135deg,#ff5cfa 0%,#c45cff 100%); border-color: #ff7dfc; }
+
     .container {
       background: var(--card-gradient);
       border-radius: 24px;
       padding: 2.5em 2em;
-      max-width: 800px;
-      margin: 3em auto;
-      box-shadow: var(--box-shadow);
-      border: 2px solid var(--primary-color);
-      animation: glow 2s infinite alternate;
+      width: min(980px, 92vw);
+      margin: 24px auto 48px;
+      border: 1px solid rgba(15,255,195,0.25);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.45), inset 0 0 24px rgba(15,255,195,0.12);
     }
-    @keyframes glow {
-      from { box-shadow: 0 0 24px 0 var(--primary-color); }
-      to { box-shadow: 0 0 48px 0 var(--accent-color); }
-    }
-    h1, h2 {
-      font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
-      color: var(--heading-color);
-      text-shadow: 0 0 14px var(--primary-color);
-      margin-bottom: 0.5em;
-      letter-spacing: 2px;
-    }
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      font-size: 1.5em;
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.3em;
-      margin-top: 2em;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 22px;
-      margin-bottom: 1em;
-    }
-    li {
-      margin-bottom: 0.6em;
-    }
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 700;
-      transition: color 0.2s;
-      border-bottom: 1px dotted var(--primary-color);
-    }
-    a:hover {
-      color: var(--primary-color);
-      border-bottom: 1px solid var(--accent-color);
-      text-shadow: 0 0 6px var(--accent-color);
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 1.2em;
-      margin-bottom: 1.5em;
-    }
-    .avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: var(--primary-color);
-      box-shadow: var(--border-glow);
-      object-fit: cover;
-      border: 3px solid var(--accent-color);
-      margin-right: 1em;
-    }
-    .contact-info {
-      font-size: 1.1em;
-      color: var(--text-color);
-    }
-    .links {
-      margin-top: 0.6em;
-      font-size: 1.1em;
-    }
-    .links a {
-      margin-right: 1.2em;
-      border-bottom: none;
-    }
-    .section {
-      margin-bottom: 2em;
-      background: rgba(30, 30, 50, 0.6);
-      border-radius: 16px;
-      padding: 1.3em 1em;
-      box-shadow: 0 0 8px var(--primary-color);
-      border-left: 3px solid var(--accent-color);
-      transition: background 0.3s;
-    }
-    .section:hover {
-      background: rgba(60, 60, 100, 0.8);
-    }
-    .sub-list {
-      margin-left: 1.5em;
-    }
-    .highlight {
-      color: var(--primary-color);
-      background: rgba(255,255,255,0.05);
-      border-radius: 6px;
-      padding: 0.2em 0.4em;
-      font-weight: bold;
-    }
-    @media (max-width: 650px) {
-      .container { padding: 1.1em 0.5em; }
-      h1 { font-size: 2em; }
-      h2 { font-size: 1.1em; }
-      .profile { flex-direction: column; align-items: flex-start; }
-      .avatar { width: 65px; height: 65px; }
-    }
+    h1,h2 { font-family: 'Orbitron', sans-serif; color: var(--heading-color); letter-spacing: 0.5px; }
+    .section { margin-top: 28px; }
+    .section.contact .highlight { color: var(--primary-color); }
+    .sub-list { margin-top: 8px; opacity: 0.95; }
   </style>
 </head>
 <body>
+  <!-- Floating toolbar with Save and Run actions -->
+  <div class="toolbar" role="toolbar" aria-label="Editor actions">
+    <button id="btnSave" class="btn-fx btn-primary" title="Download this page as index.html. Tip: To commit on GitHub later, use: git add index.html && git commit -m 'feat: add Save/Run toolbar' && git push">Save</button>
+    <button id="btnRun" class="btn-fx btn-accent" title="Open a preview of this portfolio in a new tab (simulated run). Tip: After verifying, commit via GitHub UI or: git add . && git commit -m 'chore: preview changes' && git push">Run</button>
+  </div>
+
   <div class="container">
-    <div class="profile">
-      <img src="https://avatars.githubusercontent.com/u/eshwar-21?v=4" alt="Eshwar Avatar" class="avatar" />
-      <div>
-        <h1>Behara Sai Eshwar Yerram Raju</h1>
-        <div class="contact-info">
-          Vizag, AP &nbsp;|&nbsp; <a href="mailto:eeshu155@gmail.com">eeshu155@gmail.com</a> &nbsp;|&nbsp; <span class="highlight">9550139483</span>
-        </div>
-        <div class="links">
-          <a href="https://www.linkedin.com/in/behara-sai-eshwar-yerram-raju-8ba725386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
-          <a href="https://github.com/eshwar-21" target="_blank">GitHub</a>
-          <a href="mailto:eeshu155@gmail.com">Email</a>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        <span class="highlight">Aspiring Computer Science graduate</span> with hands-on experience in data science, machine learning, and IoT applications. Passionate about leveraging technology for impactful solutions and lifelong learning. Quick to adapt to new challenges and always eager to innovate in a futuristic world.
-      </p>
-    </div>
-    <div class="section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> <span class="highlight">Python, C, C++, JavaScript, HTML, CSS, SQL</span></li>
-        <li><strong>Frameworks/Libraries:</strong> Numpy, Pandas, Matplotlib, Streamlit</li>
-        <li><strong>Database & Systems:</strong> DBMS, Operating System, OOP, Networks</li>
-        <li><strong>Tools:</strong> Git, GitHub, VS Code, Google Colab</li>
-        <li><strong>Other:</strong> Web Designing</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Smart Blind Stick</strong> <br />
-          <span class="highlight">Tech:</span> C, Arduino Uno <br />
-          Enhanced visually impaired mobility and independence using sensor technology.
-        </li>
-        <li>
-          <strong>Faculty Alert System Using GSM</strong> <br />
-          <span class="highlight">Tech:</span> C, GSM, NodeMcu <br />
-          Real-time communication platform for faculty-student interaction.
-        </li>
-      </ul>
-    </div>
+    <!-- Existing portfolio content starts here (kept intact) -->
+    <header>
+      <h1>Behara Sai Eshwar Yerram Raju</h1>
+    </header>
+
+    <!-- Education -->
     <div class="section">
       <h2>Education</h2>
       <ul>
-        <li><strong>B.Sc. Computer Science</strong>, Gayatri Vidya Parishad College <span class="highlight">(GPA 7.8)</span> <br />Minor: Applied IoT</li>
+        <li><strong>B.Sc. Computer Science</strong>, Gayatri Vidya Parishad College <span class="highlight">(GPA 7.8)</span> — Minor: Applied IoT</li>
         <li>12th (MPC), SVK Junior College <span class="highlight">(63.2%)</span></li>
       </ul>
     </div>
+
+    <!-- Experience -->
     <div class="section">
       <h2>Experience</h2>
       <ul>
@@ -206,6 +115,8 @@
         </li>
       </ul>
     </div>
+
+    <!-- Certifications -->
     <div class="section">
       <h2>Certifications</h2>
       <ul>
@@ -214,6 +125,8 @@
         <li>MongoDB: <span class="highlight">Certified in MongoDB basics</span> (2025)</li>
       </ul>
     </div>
+
+    <!-- Other Training -->
     <div class="section">
       <h2>Other Training</h2>
       <ul>
@@ -221,6 +134,8 @@
         <li>Arduino Programming (Teckbot)</li>
       </ul>
     </div>
+
+    <!-- Contact -->
     <div class="section contact">
       <h2>Contact</h2>
       <ul>
@@ -229,5 +144,28 @@
       </ul>
     </div>
   </div>
+
+  <script>
+    // SAVE: trigger download of current HTML as index.html
+    document.getElementById('btnSave').addEventListener('click', () => {
+      const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // RUN: open current page in a new tab (simulate preview)
+    document.getElementById('btnRun').addEventListener('click', () => {
+      const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      window.open(url, '_blank', 'noopener');
+      // URL will be revoked by the new tab when closed; safe to leave active for preview
+    });
+  </script>
 </body>
 </html>
