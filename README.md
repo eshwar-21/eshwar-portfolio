@@ -1,7 +1,7 @@
 # Eshwar Portfolio
 
 <div align="center">
-  <strong>A Professional Showcase of Projects, Skills, and Expertise</strong>
+> A Professional Showcase of Projects, Skills, and Expertise
 </div>
 
 ---
@@ -37,7 +37,6 @@ I am a dedicated developer passionate about creating efficient, scalable, and us
 ## 📁 Projects
 
 ### Featured Projects
-
 *More detailed project documentation to be added*
 
 ---
@@ -57,9 +56,9 @@ I am a dedicated developer passionate about creating efficient, scalable, and us
 ## 📞 Contact & Connect
 
 - **GitHub**: [eshwar-21](https://github.com/eshwar-21)
-- **Email**: *your.email@example.com*
-- **LinkedIn**: *your-linkedin-profile*
-- **Portfolio Website**: *your-website-url*
+- **Email**: [eeshu155@gmail.com](mailto:eeshu155@gmail.com)
+- **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/behara-sai-eshwar-yerram-raju-8ba725386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- **Portfolio Website**: [Portfolio](https://eshwar-21.github.io/eshwar-portfolio/)
 
 ---
 
